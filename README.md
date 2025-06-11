@@ -56,19 +56,13 @@ Dans `config.py`, remplis ton URI MongoDB Atlas :
 MONGO_URI = "mongodb+srv://<utilisateur>:<motdepasse>@cluster0.mongodb.net/?retryWrites=true&w=majority"
 ```
 
-### 3. Exécuter le pipeline ETL
-
-```bash
-python run_etl.py
-```
-
-> Cela télécharge les derniers séismes mondiaux et les stocke dans ta base MongoDB.
-
-### 4. Lancer le serveur Flask
+### 3. Lancer le serveur Flask
 
 ```bash
 python -m api.server
 ```
+
+> Cela télécharge les derniers séismes mondiaux et les stocke dans ta base MongoDB.
 
 Puis ouvre ton navigateur sur 👉 http://localhost:5000
 
