@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Earthquake Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <style>
+    #map { height: 90vh; }
+#controls {
+  padding: 10px;
+  background: white;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  border-radius: 8px;
+  box-shadow: 0 0 5px #aaa;
+}
+  </style>
+</head>
+<body>
+  <div id="controls">
+    <label>Magnitude ≥ <span id="magValue">0</span></label><br>
+    <input type="range" id="magnitudeFilter" min="0" max="10" step="0.1" value="0">
+  </div>
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
